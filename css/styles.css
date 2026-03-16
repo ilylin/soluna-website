@@ -133,7 +133,7 @@ ul {
   width: 300px;
   height: 300px;
   pointer-events: none;
-  opacity: 0.02;
+  opacity: 0.1;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpolygon points='100,10 190,50 190,150 100,190 10,150 10,50' fill='none' stroke='%234fc3f7' stroke-width='0.5'/%3E%3Cpolygon points='100,40 160,65 160,135 100,160 40,135 40,65' fill='none' stroke='%234fc3f7' stroke-width='0.4'/%3E%3Cpolygon points='100,70 130,82 130,118 100,130 70,118 70,82' fill='none' stroke='%234fc3f7' stroke-width='0.3'/%3E%3Ccircle cx='100' cy='100' r='85' fill='none' stroke='%234fc3f7' stroke-width='0.3'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
@@ -170,7 +170,7 @@ ul {
   height: 100%;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.03;
+  opacity: 0.12;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='174'%3E%3Cdefs%3E%3Cstyle%3Ecircle%7Bfill:none;stroke:%234fc3f7;stroke-width:0.5%7D%3C/style%3E%3C/defs%3E%3Ccircle cx='50' cy='87' r='43'/%3E%3Ccircle cx='100' cy='87' r='43'/%3E%3Ccircle cx='150' cy='87' r='43'/%3E%3Ccircle cx='75' cy='43.7' r='43'/%3E%3Ccircle cx='125' cy='43.7' r='43'/%3E%3Ccircle cx='75' cy='130.3' r='43'/%3E%3Ccircle cx='125' cy='130.3' r='43'/%3E%3C/svg%3E");
   background-size: 220px 191px;
 }
@@ -184,7 +184,7 @@ ul {
   width: 400px;
   height: 400px;
   pointer-events: none;
-  opacity: 0.035;
+  opacity: 0.15;
   /* Metatron's Cube — hexagonal with inner triangles */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cdefs%3E%3Cstyle%3Ecircle,line%7Bfill:none;stroke:%234fc3f7;stroke-width:0.6%7D%3C/style%3E%3C/defs%3E%3Ccircle cx='200' cy='200' r='180'/%3E%3Ccircle cx='200' cy='200' r='90'/%3E%3Ccircle cx='200' cy='110' r='45'/%3E%3Ccircle cx='200' cy='290' r='45'/%3E%3Ccircle cx='122' cy='155' r='45'/%3E%3Ccircle cx='278' cy='155' r='45'/%3E%3Ccircle cx='122' cy='245' r='45'/%3E%3Ccircle cx='278' cy='245' r='45'/%3E%3Cline x1='200' y1='110' x2='278' y2='245'/%3E%3Cline x1='278' y1='245' x2='122' y2='245'/%3E%3Cline x1='122' y1='245' x2='200' y2='110'/%3E%3Cline x1='200' y1='290' x2='122' y2='155'/%3E%3Cline x1='122' y1='155' x2='278' y2='155'/%3E%3Cline x1='278' y1='155' x2='200' y2='290'/%3E%3C/svg%3E");
   background-size: contain;
@@ -200,7 +200,7 @@ ul {
   width: 350px;
   height: 350px;
   pointer-events: none;
-  opacity: 0.03;
+  opacity: 0.12;
   /* Seed of Life — seven overlapping circles */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cdefs%3E%3Cstyle%3Ecircle%7Bfill:none;stroke:%234fc3f7;stroke-width:0.5%7D%3C/style%3E%3C/defs%3E%3Ccircle cx='150' cy='150' r='50'/%3E%3Ccircle cx='150' cy='100' r='50'/%3E%3Ccircle cx='150' cy='200' r='50'/%3E%3Ccircle cx='193.3' cy='125' r='50'/%3E%3Ccircle cx='106.7' cy='125' r='50'/%3E%3Ccircle cx='193.3' cy='175' r='50'/%3E%3Ccircle cx='106.7' cy='175' r='50'/%3E%3Ccircle cx='150' cy='150' r='100'/%3E%3C/svg%3E");
   background-size: contain;
@@ -373,7 +373,7 @@ ul {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  opacity: 0.05;
+  opacity: 0.18;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cdefs%3E%3Cstyle%3Ecircle%7Bfill:none;stroke:%234fc3f7;stroke-width:0.5%7D%3C/style%3E%3C/defs%3E%3Ccircle cx='200' cy='200' r='190'/%3E%3Ccircle cx='200' cy='200' r='130'/%3E%3Ccircle cx='200' cy='200' r='70'/%3E%3Ccircle cx='200' cy='70' r='65'/%3E%3Ccircle cx='200' cy='330' r='65'/%3E%3Ccircle cx='87' cy='135' r='65'/%3E%3Ccircle cx='313' cy='135' r='65'/%3E%3Ccircle cx='87' cy='265' r='65'/%3E%3Ccircle cx='313' cy='265' r='65'/%3E%3Ccircle cx='135' cy='87' r='45'/%3E%3Ccircle cx='265' cy='87' r='45'/%3E%3Ccircle cx='135' cy='313' r='45'/%3E%3Ccircle cx='265' cy='313' r='45'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
@@ -1016,7 +1016,7 @@ ul {
   width: 320px;
   height: 320px;
   pointer-events: none;
-  opacity: 0.04;
+  opacity: 0.15;
   /* Sri Yantra inspired — nested triangles in circle */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cdefs%3E%3Cstyle%3Ecircle,polygon,line%7Bfill:none;stroke:%234fc3f7;stroke-width:0.5%7D%3C/style%3E%3C/defs%3E%3Ccircle cx='150' cy='150' r='140'/%3E%3Ccircle cx='150' cy='150' r='110'/%3E%3Cpolygon points='150,30 270,220 30,220'/%3E%3Cpolygon points='150,270 30,80 270,80'/%3E%3Cpolygon points='150,70 230,200 70,200'/%3E%3Cpolygon points='150,230 70,100 230,100'/%3E%3Ccircle cx='150' cy='150' r='50'/%3E%3C/svg%3E");
   background-size: contain;
