@@ -170,7 +170,7 @@ ul {
   height: 100%;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.12;
+  opacity: 0.2;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='174'%3E%3Cdefs%3E%3Cstyle%3Ecircle%7Bfill:none;stroke:%234fc3f7;stroke-width:0.5%7D%3C/style%3E%3C/defs%3E%3Ccircle cx='50' cy='87' r='43'/%3E%3Ccircle cx='100' cy='87' r='43'/%3E%3Ccircle cx='150' cy='87' r='43'/%3E%3Ccircle cx='75' cy='43.7' r='43'/%3E%3Ccircle cx='125' cy='43.7' r='43'/%3E%3Ccircle cx='75' cy='130.3' r='43'/%3E%3Ccircle cx='125' cy='130.3' r='43'/%3E%3C/svg%3E");
   background-size: 220px 191px;
 }
@@ -185,8 +185,8 @@ ul {
   height: 400px;
   pointer-events: none;
   opacity: 0.15;
-  /* Metatron's Cube — hexagonal with inner triangles */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cdefs%3E%3Cstyle%3Ecircle,line%7Bfill:none;stroke:%234fc3f7;stroke-width:0.6%7D%3C/style%3E%3C/defs%3E%3Ccircle cx='200' cy='200' r='180'/%3E%3Ccircle cx='200' cy='200' r='90'/%3E%3Ccircle cx='200' cy='110' r='45'/%3E%3Ccircle cx='200' cy='290' r='45'/%3E%3Ccircle cx='122' cy='155' r='45'/%3E%3Ccircle cx='278' cy='155' r='45'/%3E%3Ccircle cx='122' cy='245' r='45'/%3E%3Ccircle cx='278' cy='245' r='45'/%3E%3Cline x1='200' y1='110' x2='278' y2='245'/%3E%3Cline x1='278' y1='245' x2='122' y2='245'/%3E%3Cline x1='122' y1='245' x2='200' y2='110'/%3E%3Cline x1='200' y1='290' x2='122' y2='155'/%3E%3Cline x1='122' y1='155' x2='278' y2='155'/%3E%3Cline x1='278' y1='155' x2='200' y2='290'/%3E%3C/svg%3E");
+  /* Vesica Piscis — two overlapping circles with connecting arcs */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cdefs%3E%3Cstyle%3Ecircle,ellipse,line%7Bfill:none;stroke:%234fc3f7;stroke-width:0.5%7D%3C/style%3E%3C/defs%3E%3Ccircle cx='155' cy='200' r='120'/%3E%3Ccircle cx='245' cy='200' r='120'/%3E%3Ccircle cx='200' cy='200' r='170'/%3E%3Cellipse cx='200' cy='200' rx='45' ry='104'/%3E%3Cline x1='200' y1='80' x2='200' y2='320' stroke-dasharray='4,4'/%3E%3Ccircle cx='200' cy='200' r='30'/%3E%3Ccircle cx='200' cy='200' r='60'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
   animation: floatGeometry1 80s ease-in-out infinite;
