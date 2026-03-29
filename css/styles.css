@@ -571,6 +571,20 @@ ul {
   font-size: 1.05rem;
 }
 
+/* Poster variant for square images */
+.about-grid--poster {
+  align-items: start;
+}
+
+.about-image--poster {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(79,195,247,0.15);
+  position: sticky;
+  top: 6rem;
+}
+
 .about-values {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1207,6 +1221,12 @@ ul {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .about-image--poster {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .about-values {
