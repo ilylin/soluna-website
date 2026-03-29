@@ -258,7 +258,7 @@ ul {
   padding: 0 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .nav-logo {
@@ -318,6 +318,8 @@ ul {
   cursor: pointer;
   padding: 5px;
   z-index: 1001;
+  position: absolute;
+  right: 2rem;
 }
 
 .nav-toggle span {
@@ -403,6 +405,8 @@ ul {
 .hero-moon {
   margin-bottom: 1.5rem;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   animation: float 4s ease-in-out infinite;
 }
 
@@ -1149,8 +1153,16 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .nav-container {
+    position: relative;
+  }
+
   .nav-toggle {
     display: flex;
+  }
+
+  .hero-moon {
+    height: 140px !important;
   }
 
   .nav-links {
@@ -1242,6 +1254,10 @@ ul {
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 2.2rem;
+  }
+
+  .hero-moon {
+    height: 100px !important;
   }
 
   .gallery-grid {
