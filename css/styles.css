@@ -262,15 +262,17 @@ ul {
 }
 
 .nav-logo {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--soft-white);
-  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
 }
 
-.nav-logo span {
-  color: var(--gold);
+.nav-logo img {
+  height: 48px;
+  width: auto;
+}
+
+.footer-brand .nav-logo img {
+  height: 64px;
 }
 
 .nav-links {
