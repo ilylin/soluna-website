@@ -571,9 +571,13 @@ ul {
   font-size: 1.05rem;
 }
 
-/* Poster variant for square images */
+/* Poster variant – always stacked (image on top, text below) */
 .about-grid--poster {
-  align-items: start;
+  grid-template-columns: 1fr;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about-image--poster {
@@ -581,8 +585,12 @@ ul {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(79,195,247,0.15);
-  position: sticky;
-  top: 6rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.about-grid--poster .about-text {
+  text-align: left;
 }
 
 .about-values {
@@ -1130,6 +1138,12 @@ ul {
   .services-grid {
     grid-template-columns: 1fr;
   }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-image--poster {
+    position: static;
   }
 }
 
@@ -1185,15 +1199,12 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .about-image--poster {
+    max-width: 100%;
   }
 
-  .about-image--poster {
-    position: static;
-    max-width: 400px;
-    margin: 0 auto;
+  .about-text {
+    text-align: left;
   }
 
   .about-values {
