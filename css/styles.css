@@ -571,13 +571,9 @@ ul {
   font-size: 1.05rem;
 }
 
-/* Poster variant – always stacked (image on top, text below) */
+/* Poster variant for square images */
 .about-grid--poster {
-  grid-template-columns: 1fr;
-  align-items: center;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  align-items: start;
 }
 
 .about-image--poster {
@@ -585,12 +581,8 @@ ul {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(79,195,247,0.15);
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.about-grid--poster .about-text {
-  text-align: left;
+  position: sticky;
+  top: 6rem;
 }
 
 .about-values {
@@ -1144,6 +1136,8 @@ ul {
   }
   .about-image--poster {
     position: static;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
