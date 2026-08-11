@@ -62,7 +62,10 @@
         <!-- Contact Form -->
         <div>
           <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1.5rem; color: var(--soft-white);">Send Us a Message</h2>
-          <form class="contact-form">
+          <form class="contact-form" action="https://formsubmit.co/solunasacredsound@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from the SoLuna website">
+            <input type="hidden" name="_template" value="table">
+            <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" placeholder="Full name" required>
@@ -77,6 +80,7 @@
               <textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
 
@@ -143,6 +147,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>

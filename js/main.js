@@ -34,22 +34,45 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Contact form handler ---
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      // In production, POST to a form backend (Formspree, Netlify Forms, etc.)
-      const formData = new FormData(contactForm);
-      console.log('Contact form submitted:', Object.fromEntries(formData));
-
       const btn = contactForm.querySelector('button[type="submit"]');
+      const status = contactForm.querySelector('.form-status');
       const origText = btn.textContent;
-      btn.textContent = '✓ Message Sent!';
+      btn.textContent = 'Sending...';
       btn.disabled = true;
-      contactForm.reset();
+      status.textContent = '';
+      status.className = 'form-status';
 
-      setTimeout(() => {
+      try {
+        const endpoint = contactForm.action.replace(
+          'https://formsubmit.co/',
+          'https://formsubmit.co/ajax/'
+        );
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: {
+            Accept: 'application/json'
+          }
+        });
+        const result = await response.json();
+
+        if (!response.ok || result.success === false || result.success === 'false') {
+          throw new Error(result.message || 'Message delivery failed.');
+        }
+
+        btn.textContent = 'Message Sent!';
+        status.textContent = 'Thank you! Your message has been sent.';
+        status.classList.add('success');
+        contactForm.reset();
+      } catch (error) {
         btn.textContent = origText;
         btn.disabled = false;
-      }, 4000);
+        status.textContent = 'We could not send your message. Please email solunasacredsound@gmail.com directly.';
+        status.classList.add('error');
+        console.error('Contact form submission failed:', error);
+      }
     });
   }
 

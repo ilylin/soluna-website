@@ -919,6 +919,24 @@ ul {
   gap: 1.25rem;
 }
 
+.form-honeypot {
+  display: none !important;
+}
+
+.form-status {
+  min-height: 1.5em;
+  margin: 0;
+  text-align: center;
+}
+
+.form-status.success {
+  color: var(--cyan-glow);
+}
+
+.form-status.error {
+  color: #ff9e9e;
+}
+
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
