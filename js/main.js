@@ -36,6 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const localTimeField = contactForm.querySelector('#local-time');
+      if (localTimeField) {
+        localTimeField.value = new Date().toLocaleString('en-US', { timeZoneName: 'short' });
+      }
       const btn = contactForm.querySelector('button[type="submit"]');
       const status = contactForm.querySelector('.form-status') || document.querySelector('.form-status');
       const origText = btn.textContent;
