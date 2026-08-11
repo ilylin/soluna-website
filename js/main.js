@@ -61,10 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.gallery-item').forEach(item => {
     item.addEventListener('click', () => {
       if (lightbox && lightboxContent) {
+        const image = item.querySelector('img');
         const emoji = item.querySelector('.gallery-emoji');
-        const caption = item.querySelector('.overlay')?.textContent || '';
-        if (emoji) {
-          lightboxContent.textContent = emoji.textContent;
+        if (image) {
+          lightboxContent.src = image.currentSrc || image.src;
+          lightboxContent.alt = image.alt;
+          lightboxContent.style.display = '';
+        } else if (emoji) {
+          lightboxContent.removeAttribute('src');
+          lightboxContent.alt = emoji.textContent;
         }
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -90,6 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lightbox) {
       lightbox.classList.remove('active');
       document.body.style.overflow = '';
+      if (lightboxContent) {
+        lightboxContent.removeAttribute('src');
+        lightboxContent.alt = '';
+      }
     }
   }
 

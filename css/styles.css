@@ -769,10 +769,8 @@ ul {
   max-width: 80vw;
   max-height: 80vh;
   border-radius: var(--radius);
-  font-size: 8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  object-fit: contain;
 }
 
 .lightbox-close {
