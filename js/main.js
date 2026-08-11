@@ -37,12 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = contactForm.querySelector('button[type="submit"]');
-      const status = contactForm.querySelector('.form-status');
+      const status = contactForm.querySelector('.form-status') || document.querySelector('.form-status');
       const origText = btn.textContent;
       btn.textContent = 'Sending...';
       btn.disabled = true;
-      status.textContent = '';
-      status.className = 'form-status';
+      if (status) {
+        status.textContent = '';
+        status.className = 'form-status';
+      }
 
       try {
         const endpoint = contactForm.action.replace(
@@ -63,14 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         btn.textContent = 'Message Sent!';
-        status.textContent = 'Thank you! Your message has been sent.';
-        status.classList.add('success');
+        if (status) {
+          status.textContent = 'Thank you! Your message has been sent.';
+          status.classList.add('success');
+        }
         contactForm.reset();
       } catch (error) {
         btn.textContent = origText;
         btn.disabled = false;
-        status.textContent = 'We could not send your message. Please email solunasacredsound@gmail.com directly.';
-        status.classList.add('error');
+        if (status) {
+          status.textContent = 'We could not send your message. Please email solunasacredsound@gmail.com directly.';
+          status.classList.add('error');
+        }
         console.error('Contact form submission failed:', error);
       }
     });
@@ -80,25 +86,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightbox = document.querySelector('.lightbox');
   const lightboxContent = document.querySelector('.lightbox-content');
   const lightboxClose = document.querySelector('.lightbox-close');
+  const lightboxPrev = document.querySelector('.lightbox-prev');
+  const lightboxNext = document.querySelector('.lightbox-next');
+  const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+  let currentGalleryIndex = -1;
 
-  document.querySelectorAll('.gallery-item').forEach(item => {
+  galleryItems.forEach((item, index) => {
     item.addEventListener('click', () => {
-      if (lightbox && lightboxContent) {
-        const image = item.querySelector('img');
-        const emoji = item.querySelector('.gallery-emoji');
-        if (image) {
-          lightboxContent.src = image.currentSrc || image.src;
-          lightboxContent.alt = image.alt;
-          lightboxContent.style.display = '';
-        } else if (emoji) {
-          lightboxContent.removeAttribute('src');
-          lightboxContent.alt = emoji.textContent;
-        }
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
+      showGalleryImage(index);
     });
   });
+
+  if (lightboxPrev) {
+    lightboxPrev.addEventListener('click', () => showGalleryImage(currentGalleryIndex - 1));
+  }
+
+  if (lightboxNext) {
+    lightboxNext.addEventListener('click', () => showGalleryImage(currentGalleryIndex + 1));
+  }
 
   if (lightboxClose) {
     lightboxClose.addEventListener('click', closeLightbox);
@@ -111,13 +116,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
+    if (!lightbox?.classList.contains('active')) return;
+
+    if (e.key === 'Escape') {
+      closeLightbox();
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      showGalleryImage(currentGalleryIndex - 1);
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      showGalleryImage(currentGalleryIndex + 1);
+    }
   });
+
+  function showGalleryImage(index) {
+    if (!lightbox || !lightboxContent || galleryItems.length === 0) return;
+
+    currentGalleryIndex = (index + galleryItems.length) % galleryItems.length;
+    const image = galleryItems[currentGalleryIndex].querySelector('img');
+    if (!image) return;
+
+    lightboxContent.src = image.currentSrc || image.src;
+    lightboxContent.alt = image.alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 
   function closeLightbox() {
     if (lightbox) {
       lightbox.classList.remove('active');
       document.body.style.overflow = '';
+      currentGalleryIndex = -1;
       if (lightboxContent) {
         lightboxContent.removeAttribute('src');
         lightboxContent.alt = '';

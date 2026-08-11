@@ -766,11 +766,37 @@ ul {
 }
 
 .lightbox-content {
-  max-width: 80vw;
+  max-width: min(80vw, calc(100vw - 8rem));
   max-height: 80vh;
   border-radius: var(--radius);
   display: block;
   object-fit: contain;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1rem;
+  border: none;
+  background: none;
+  color: var(--soft-white);
+  font-size: 3rem;
+  cursor: pointer;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.lightbox-nav:hover {
+  color: var(--gold);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev {
+  left: 1.5rem;
+}
+
+.lightbox-next {
+  right: 1.5rem;
 }
 
 .lightbox-close {
