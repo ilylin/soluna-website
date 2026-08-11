@@ -31,35 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Newsletter form handler ---
-  document.querySelectorAll('.newsletter-form, .footer-newsletter').forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const input = form.querySelector('input[type="email"]');
-      const successMsg = form.parentElement.querySelector('.newsletter-success');
-
-      if (input && input.value) {
-        // In production, this would POST to an email service API (Mailchimp, ConvertKit, etc.)
-        console.log('Newsletter signup:', input.value);
-        input.value = '';
-
-        if (successMsg) {
-          successMsg.classList.add('show');
-          setTimeout(() => successMsg.classList.remove('show'), 4000);
-        } else {
-          const btn = form.querySelector('button');
-          const origText = btn.textContent;
-          btn.textContent = '✓ Subscribed!';
-          btn.disabled = true;
-          setTimeout(() => {
-            btn.textContent = origText;
-            btn.disabled = false;
-          }, 3000);
-        }
-      }
-    });
-  });
-
   // --- Contact form handler ---
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {

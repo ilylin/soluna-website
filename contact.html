@@ -8,6 +8,24 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+  <script>
+    (function (s, e, n, d, er) {
+      s['Sender'] = er;
+      s[er] = s[er] || function () {
+        (s[er].q = s[er].q || []).push(arguments)
+      }, s[er].l = 1 * new Date();
+      s[er].on = function(event, callback) {
+        s[er].listeners = s[er].listeners || {};
+        (s[er].listeners[event] = s[er].listeners[event] || []).push(callback);
+      };
+      var a = e.createElement(n),
+          m = e.getElementsByTagName(n)[0];
+      a.async = 1;
+      a.src = d;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+    sender('fd69ce03919505')
+  </script>
 </head>
 <body>
 
@@ -102,11 +120,7 @@
       <div class="newsletter">
         <h2>Join the SoLuna Circle</h2>
         <p>Subscribe for event updates, wellness tips, and exclusive offers.</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
-        <p class="newsletter-success">✨ Welcome to the SoLuna Circle! Check your inbox for a special gift.</p>
+        <div style="text-align: left" class="sender-form-field" data-sender-form-id="bo21KY"></div>
       </div>
     </div>
   </section>
