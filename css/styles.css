@@ -888,7 +888,7 @@ ul {
 
 .home-newsletter h2 {
   font-family: var(--font-heading);
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   line-height: 1.15;
   margin-bottom: 1rem;
   color: var(--soft-white);
@@ -898,7 +898,6 @@ ul {
   max-width: 520px;
   margin-bottom: 1.75rem;
   color: var(--text-light);
-  font-family: "Trebuchet MS", Arial, sans-serif;
   opacity: 0.88;
 }
 
@@ -907,8 +906,7 @@ ul {
   flex-wrap: wrap;
   gap: 0.75rem 1.25rem;
   color: var(--gold);
-  font-family: "Trebuchet MS", Arial, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.875rem;
 }
 
 .home-newsletter-benefits i {
@@ -926,13 +924,11 @@ ul {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 .contact-section {
   padding-top: 5rem;
   padding-bottom: 6rem;
-  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 .contact-grid {
@@ -983,6 +979,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 .form-honeypot {
@@ -1058,8 +1055,8 @@ ul {
   text-transform: none;
 }
 
-.contact-section .form-group input,
-.contact-section .form-group textarea {
+.contact-form .form-group input,
+.contact-form .form-group textarea {
   font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
@@ -1381,6 +1378,10 @@ ul {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2.5rem 1.5rem;
+  }
+
+  .home-newsletter h2 {
+    font-size: 2.2rem;
   }
 
   .home-newsletter-form {
