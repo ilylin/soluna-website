@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SoLuna Sacred Sound</title>
   <meta name="description" content="SoLuna Sacred Sound — Immersive sound healing experiences for deep relaxation, stress relief, and inner harmony. Group sessions, private sessions, and events.">
-  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="css/styles.css?v=7">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
   <script>
@@ -36,11 +36,11 @@
   <nav class="navbar">
     <div class="nav-container">
       
-      <div class="nav-toggle">
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
         <span></span><span></span><span></span>
-      </div>
+      </button>
       <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="events.html">Events</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
@@ -51,7 +51,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <img src="images/soluna-logo.png" alt="SoLuna Sacred Sound" class="hero-moon" style="height: 384px; width: auto; filter: brightness(1.2);">
+      <img src="images/soluna-logo.png" alt="SoLuna Sacred Sound" class="hero-moon">
       <p>Immerse yourself in the resonant frequencies of crystal harp, handpan, gongs, and Native American flute. Relax. Reset. Rejuvenate. Reconnect with your inner harmony.</p>
       <div class="btn-group">
         <a href="events.html" class="btn btn-primary">Upcoming Events</a>
@@ -64,7 +64,7 @@
   <section class="section">
     <div class="container">
       <div class="about-grid about-grid--poster">
-        <div class="about-image about-image--poster"><img src="images/soluna-poster.png" alt="Valera and Amaris - SoLuna Sacred Sound" style="width:100%; height:100%; object-fit:cover;"></div>
+        <div class="about-image about-image--poster"><img src="images/soluna-poster.png" alt="Valera and Amaris - SoLuna Sacred Sound"></div>
         <div class="about-text">
           <h2>About SoLuna Sacred Sound</h2>
           <p>SoLuna Sacred Sound is a deeply immersive sound journey - an invitation to return home to yourself.</p>
@@ -90,13 +90,13 @@
       <p class="section-subtitle">Together, Valera &amp; Amaris create a harmonious soundscape that allows you to fully unwind and connect with your inner self</p>
 
       <div class="about-grid">
-        <div class="about-image" style="font-size: inherit;"><img src="images/valera-amaris.jpg" alt="Valera and Amaris — SoLuna Sacred Sound" style="width:100%; height:100%; object-fit:cover;"></div>
+        <div class="about-image"><img src="images/valera-amaris.jpg" alt="Valera and Amaris — SoLuna Sacred Sound"></div>
         <div class="about-text">
           <h2>Valera &amp; Amaris</h2>
-          <p style="color: var(--gold); font-style: italic; margin-bottom: 1rem;">Sound Bath Practitioners &amp; Energy Healers · <a href="https://instagram.com/valvulfson" target="_blank" rel="noopener">@valvulfson</a></p>
+          <p class="guide-role">Sound Bath Practitioners &amp; Energy Healers · <a href="https://instagram.com/valvulfson" target="_blank" rel="noopener">@valvulfson</a></p>
           <p>Valera and Amaris are the heart and soul of SoLuna. Valera's approach blends resonant sounds, Native American flute, crystal harp, and handpan to create deeply meditative soundscapes, while Amaris brings a hands-on approach to energy healing and Reiki, helping participants release tension and find stillness.</p>
           <p>Together, they craft immersive sound bath experiences infused with intention, intuition, and heart — guiding participants into profound states of relaxation and renewal. Their complementary gifts create a nurturing space where deep healing can unfold naturally.</p>
-          <a href="contact.html" class="btn btn-outline" style="margin-top:1.5rem;">Book a Session</a>
+          <a href="contact.html" class="btn btn-outline section-cta">Book a Session</a>
         </div>
       </div>
     </div>
@@ -126,7 +126,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-simple">
-        <a href="index.html" class="footer-logo"><img src="images/soluna-logo.png" alt="SoLuna Sacred Sound" style="height: 100px; width: auto;"></a>
+        <a href="index.html" class="footer-logo"><img src="images/soluna-logo.png" alt="SoLuna Sacred Sound"></a>
         <div class="footer-contact">
           <a href="mailto:solunasacredsound@gmail.com"><i class="fas fa-envelope"></i> solunasacredsound@gmail.com</a>
           <a href="tel:+12069284344"><i class="fas fa-phone"></i> (206) 928-4344</a>
@@ -141,6 +141,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>

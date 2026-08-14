@@ -261,20 +261,6 @@ ul {
   justify-content: center;
 }
 
-.nav-logo {
-  display: flex;
-  align-items: center;
-}
-
-.nav-logo img {
-  height: 192px;
-  width: auto;
-}
-
-.footer-brand .nav-logo img {
-  height: 256px;
-}
-
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -311,6 +297,14 @@ ul {
   width: 100%;
 }
 
+.nav-links a:focus-visible,
+.nav-toggle:focus-visible,
+.btn:focus-visible,
+.contact-item:focus-visible {
+  outline: 2px solid var(--cyan-glow);
+  outline-offset: 4px;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -320,6 +314,11 @@ ul {
   z-index: 1001;
   position: absolute;
   right: 2rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  appearance: none;
 }
 
 .nav-toggle span {
@@ -403,10 +402,13 @@ ul {
 }
 
 .hero-moon {
+  width: auto;
+  height: 384px;
   margin-bottom: 1.5rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  filter: brightness(1.2);
   animation: float 4s ease-in-out infinite;
 }
 
@@ -509,35 +511,6 @@ ul {
   border-color: rgba(79, 195, 247, 0.3);
 }
 
-/* --- Features / Highlights Grid --- */
-.highlights-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.highlight-card {
-  text-align: center;
-}
-
-.highlight-card .icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.highlight-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-  color: var(--gold);
-}
-
-.highlight-card p {
-  font-size: 0.95rem;
-  opacity: 0.85;
-}
-
 /* --- About Page --- */
 .about-grid {
   display: grid;
@@ -556,6 +529,12 @@ ul {
   justify-content: center;
   font-size: 6rem;
   border: 1px solid var(--glass-border);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-text h2 {
@@ -585,59 +564,13 @@ ul {
   top: 6rem;
 }
 
-.about-values {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.value-item {
-  text-align: center;
-}
-
-.value-item .icon {
-  font-size: 2rem;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.value-item h4 {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  color: var(--cyan-glow);
-}
-
-/* --- Services Page --- */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.service-card .icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.service-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
+.guide-role {
   color: var(--gold);
-  margin-bottom: 0.75rem;
+  font-style: italic;
 }
 
-.service-card p {
-  margin-bottom: 1rem;
-  opacity: 0.85;
-}
-
-.service-card .price {
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  color: var(--gold-light);
-  font-weight: 600;
+.section-cta {
+  margin-top: 1.5rem;
 }
 
 /* --- Events Page --- */
@@ -722,6 +655,16 @@ ul {
   color: #ffb3b3;
 }
 
+.private-booking {
+  text-align: center;
+}
+
+.private-booking > p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  opacity: 0.85;
+}
+
 /* --- Gallery Page --- */
 .gallery-grid {
   display: grid;
@@ -758,7 +701,7 @@ ul {
 .gallery-item .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(26, 5, 51, 0.6);
+  background: rgba(10, 14, 26, 0.72);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -842,53 +785,17 @@ ul {
   color: var(--gold);
 }
 
-/* --- Shop Page --- */
-.shop-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+.gallery-cta-section {
+  padding-top: 0;
 }
 
-.product-card {
+.gallery-cta {
   text-align: center;
 }
 
-.product-image {
-  aspect-ratio: 1;
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--rich-purple), var(--mystic-violet));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  border: 1px solid var(--glass-border);
-}
-
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.product-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  color: var(--soft-white);
-  margin-bottom: 0.5rem;
-}
-
-.product-card .price {
-  color: var(--gold);
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.product-card .btn {
-  width: 100%;
+.gallery-cta p {
+  opacity: 0.6;
+  font-style: italic;
 }
 
 /* --- Newsletter Section --- */
@@ -1184,31 +1091,6 @@ ul {
   overflow-wrap: anywhere;
 }
 
-.social-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.social-links a {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: 1px solid var(--glass-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  transition: all var(--transition);
-  background: var(--glass-bg);
-}
-
-.social-links a:hover {
-  background: var(--cyan-glow);
-  border-color: var(--cyan-glow);
-  transform: translateY(-3px);
-}
-
 /* --- Page Header (for inner pages) --- */
 .page-header {
   padding: 10rem 0 4rem;
@@ -1234,7 +1116,7 @@ ul {
 
 /* --- Footer --- */
 .footer {
-  background: rgba(10, 2, 20, 0.8);
+  background: rgba(10, 14, 26, 0.92);
   padding: 3rem 0 1.5rem;
   position: relative;
   z-index: 1;
@@ -1248,6 +1130,11 @@ ul {
   text-align: center;
   gap: 1.5rem;
   margin-bottom: 2rem;
+}
+
+.footer-logo img {
+  width: auto;
+  height: 100px;
 }
 
 .footer-contact {
@@ -1299,12 +1186,6 @@ ul {
 
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {
-  .highlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1364,10 +1245,6 @@ ul {
     font-size: 2.5rem;
   }
 
-  .highlights-grid {
-    grid-template-columns: 1fr;
-  }
-
   .about-image--poster {
     max-width: 100%;
   }
@@ -1376,19 +1253,8 @@ ul {
     text-align: left;
   }
 
-  .about-values {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .shop-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
   }
 
   .contact-grid {

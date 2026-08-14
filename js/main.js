@@ -8,10 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
 
-  if (navToggle) {
+  if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
-      navToggle.classList.toggle('open');
-      navLinks.classList.toggle('open');
+      const isOpen = navToggle.classList.toggle('open');
+      navLinks.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
     });
 
     // Close mobile nav when a link is clicked
@@ -19,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         navToggle.classList.remove('open');
         navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open navigation');
       });
     });
   }
@@ -174,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  document.querySelectorAll('.glass-card, .gallery-item, .event-card, .product-card').forEach(el => {
+  document.querySelectorAll('.glass-card, .gallery-item, .event-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -188,19 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       link.classList.add('active');
     }
-  });
-
-  // --- Add to Cart (simple demo) ---
-  document.querySelectorAll('.add-to-cart').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const origText = btn.textContent;
-      btn.textContent = '✓ Added to Cart!';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = origText;
-        btn.disabled = false;
-      }, 2000);
-    });
   });
 
 });

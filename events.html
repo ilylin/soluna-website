@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events — SoLuna Sacred Sound</title>
   <meta name="description" content="View upcoming SoLuna sound bath events, moon ceremonies, workshops, and community gatherings.">
-  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="css/styles.css?v=7">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
   <script>
@@ -36,12 +36,12 @@
   <nav class="navbar">
     <div class="nav-container">
       
-      <div class="nav-toggle">
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
         <span></span><span></span><span></span>
-      </div>
+      </button>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="events.html" class="active">Events</a>
+        <a href="events.html" class="active" aria-current="page">Events</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -68,10 +68,10 @@
 
   <!-- Private Booking CTA -->
   <section class="section">
-    <div class="container" style="text-align: center;">
+    <div class="container private-booking">
       <h2 class="section-title">Don't See What You're Looking For?</h2>
       <div class="gold-line"></div>
-      <p style="max-width:600px; margin: 0 auto 2rem; opacity:0.85;">We also offer private sessions and custom events. Reach out and let's create something magical together.</p>
+      <p>We also offer private sessions and custom events. Reach out and let's create something magical together.</p>
       <a href="contact.html" class="btn btn-primary">Book a Private Session</a>
     </div>
   </section>
@@ -80,7 +80,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-simple">
-        <a href="index.html" class="footer-logo"><img src="images/soluna-logo.png" alt="SoLuna Sacred Sound" style="height: 100px; width: auto;"></a>
+        <a href="index.html" class="footer-logo"><img src="images/soluna-logo.png" alt="SoLuna Sacred Sound"></a>
         <div class="footer-contact">
           <a href="mailto:solunasacredsound@gmail.com"><i class="fas fa-envelope"></i> solunasacredsound@gmail.com</a>
           <a href="tel:+12069284344"><i class="fas fa-phone"></i> (206) 928-4344</a>
@@ -95,7 +95,7 @@
     </div>
   </footer>
 
-  <script src="js/events.js?v=1"></script>
-  <script src="js/main.js"></script>
+  <script src="js/events.js?v=2"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>
