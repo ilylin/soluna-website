@@ -49,19 +49,21 @@
   </nav>
 
   <!-- Page Header -->
-  <section class="page-header">
+  <section class="page-header contact-page-header">
     <h1>Get in Touch</h1>
-    <p>We'd love to hear from you</p>
+    <p>Connect with us, plan a sound journey, or join the SoLuna Circle.</p>
   </section>
 
   <!-- Contact Section -->
-  <section class="section">
+  <section class="section contact-section">
     <div class="container">
       <div class="contact-grid">
 
         <!-- Contact Form -->
-        <div>
-          <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1.5rem; color: var(--soft-white);">Send Us a Message</h2>
+        <div class="contact-card contact-message-card">
+          <span class="contact-eyebrow">Start a conversation</span>
+          <h2>Send Us a Message</h2>
+          <p class="contact-intro">Interested in a private session, group gathering, or collaboration? Tell us what you have in mind.</p>
           <form class="contact-form" action="https://formsubmit.co/solunasacredsound@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="New message from the SoLuna website">
             <input type="hidden" name="_template" value="table">
@@ -80,51 +82,51 @@
               <label for="message">Your Message</label>
               <textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            <button type="submit" class="btn btn-primary contact-submit">Send Message</button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
 
-        <!-- Contact Info -->
-        <div>
-          <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1.5rem; color: var(--soft-white);">Connect With Us</h2>
-          <div class="contact-info">
-            <div class="contact-item">
-              <span class="icon">📧</span>
-              <div>
-                <h4>Email</h4>
-                <p><a href="mailto:solunasacredsound@gmail.com" style="color: var(--soft-white);">solunasacredsound@gmail.com</a></p>
-              </div>
+        <div class="contact-sidebar">
+          <!-- Newsletter -->
+          <div class="contact-card contact-subscribe-card">
+            <span class="contact-eyebrow">Stay connected</span>
+            <h2>Join the SoLuna Circle</h2>
+            <p class="contact-intro">Receive upcoming event announcements, wellness inspiration, and special offerings in your inbox.</p>
+            <div class="sender-form-wrap">
+              <div class="sender-form-field" data-sender-form-id="bo21KY"></div>
             </div>
-            <div class="contact-item">
-              <span class="icon">📱</span>
-              <div>
-                <h4>Phone</h4>
-                <p><a href="tel:+12069284344" style="color: var(--soft-white);">(206) 928-4344</a></p>
-              </div>
-            </div>
+          </div>
 
-
-            <div style="margin-top: 1rem;">
-              <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--gold); margin-bottom: 1rem;">Follow Us</h4>
-              <div class="social-links">
-                <a href="https://instagram.com/soluna_sacred_sound" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              </div>
+          <!-- Contact Info -->
+          <div class="contact-card contact-details-card">
+            <h3>Connect Directly</h3>
+            <div class="contact-info">
+              <a class="contact-item" href="mailto:solunasacredsound@gmail.com">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <span>
+                  <strong>Email</strong>
+                  <small>solunasacredsound@gmail.com</small>
+                </span>
+              </a>
+              <a class="contact-item" href="tel:+12069284344">
+                <span class="icon"><i class="fas fa-phone"></i></span>
+                <span>
+                  <strong>Phone</strong>
+                  <small>(206) 928-4344</small>
+                </span>
+              </a>
+              <a class="contact-item" href="https://instagram.com/soluna_sacred_sound" target="_blank" rel="noopener">
+                <span class="icon"><i class="fab fa-instagram"></i></span>
+                <span>
+                  <strong>Instagram</strong>
+                  <small>@soluna_sacred_sound</small>
+                </span>
+              </a>
             </div>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="section">
-    <div class="container">
-      <div class="newsletter">
-        <h2>Join the SoLuna Circle</h2>
-        <p>Subscribe for event updates, wellness tips, and exclusive offers.</p>
-        <div style="text-align: left" class="sender-form-field" data-sender-form-id="bo21KY"></div>
       </div>
     </div>
   </section>
