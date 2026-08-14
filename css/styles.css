@@ -695,6 +695,33 @@ ul {
   font-size: 0.95rem;
 }
 
+.event-info p + p {
+  margin-top: 0.75rem;
+}
+
+.event-logo {
+  width: 220px;
+  margin-bottom: 1rem;
+}
+
+.event-link {
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+}
+
+.events-message {
+  padding: 2rem;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  background: var(--glass-bg);
+  color: var(--text-light);
+  text-align: center;
+}
+
+.events-message.error {
+  color: #ffb3b3;
+}
+
 /* --- Gallery Page --- */
 .gallery-grid {
   display: grid;

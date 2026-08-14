@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events — SoLuna Sacred Sound</title>
   <meta name="description" content="View upcoming SoLuna sound bath events, moon ceremonies, workshops, and community gatherings.">
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=6">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
   <script>
@@ -57,25 +57,11 @@
   <!-- Events List -->
   <section class="section">
     <div class="container">
-      <div class="events-list">
-
-        <div class="glass-card event-card">
-          <div class="event-date">
-            <div class="month">Sep</div>
-            <div class="day">11–13</div>
-          </div>
-          <div class="event-info">
-            <img src="images/imagine-gathering-logo.png" alt="Imagine Music &amp; Arts Festival 2026" style="width: 220px; margin-bottom: 1rem;">
-            <h3>SoLuna: Sacred Sound Journey at Imagine Gathering 2026</h3>
-            <div class="event-meta">September 11–13, 2026 &nbsp;|&nbsp; Doe Bay Resort &amp; Retreat, Orcas Island, WA</div>
-            <p>Join Valera and Amaris for an immersive sound meditation inspired by the natural beauty of Orcas Island. A woven soundscape of four large gongs tuned to 432 Hz, sacred instruments, and gentle guided meditation invites deep rest, reflection, and inner discovery.</p>
-            <p style="margin-top: 0.75rem;">Journey through guided imagery inspired by orcas and the Salish Sea as sound, water, and breath come together to release tension, calm the nervous system, and restore clarity and balance.</p>
-            <a href="https://imaginegathering.com/workshops/soluna/" class="btn btn-outline" target="_blank" rel="noopener" style="margin-top:1rem; padding: 0.6rem 1.5rem;">View Festival Workshop</a>
-          </div>
-        </div>
-
-
-
+      <div class="events-list" data-events-list>
+        <p class="events-message">Loading upcoming events...</p>
+        <noscript>
+          <p class="events-message error">JavaScript is required to display upcoming events.</p>
+        </noscript>
       </div>
     </div>
   </section>
@@ -109,6 +95,7 @@
     </div>
   </footer>
 
+  <script src="js/events.js?v=1"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

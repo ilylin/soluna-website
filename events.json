@@ -1,0 +1,20 @@
+{
+  "instructions": "Edit the events array to update the Events page. Use YYYY-MM-DD dates, set published to false to hide an event, and separate multiple paragraphs in the description array.",
+  "events": [
+    {
+      "published": true,
+      "title": "SoLuna: Sacred Sound Journey at Imagine Gathering 2026",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-13",
+      "location": "Doe Bay Resort & Retreat, Orcas Island, WA",
+      "description": [
+        "Join Valera and Amaris for an immersive sound meditation inspired by the natural beauty of Orcas Island. A woven soundscape of four large gongs tuned to 432 Hz, sacred instruments, and gentle guided meditation invites deep rest, reflection, and inner discovery.",
+        "Journey through guided imagery inspired by orcas and the Salish Sea as sound, water, and breath come together to release tension, calm the nervous system, and restore clarity and balance."
+      ],
+      "image": "images/imagine-gathering-logo.png",
+      "imageAlt": "Imagine Music & Arts Festival 2026",
+      "link": "https://imaginegathering.com/workshops/soluna/",
+      "buttonText": "View Festival Workshop"
+    }
+  ]
+}
